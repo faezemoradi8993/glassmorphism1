@@ -1,0 +1,105 @@
+section {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+
+    .card {
+
+        width                : 300px;
+        height               : 400px;
+        z-index              : 2;
+        background           : rgba(#ffffff, 0.1);
+        padding              : 40px 30px;
+        backdrop-filter      : blur(17px);
+        border-radius        : 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius   : 20px;
+        -ms-border-radius    : 20px;
+        -o-border-radius     : 20px;
+        border-top           : 0.5px solid #ffffff75;
+        border-left          : 0.5px solid #ffffff75;
+        margin               : 10px;
+        box-shadow           : 2px 3px 20px 0px black;
+        overflow             : hidden;
+
+
+
+        .contain {
+            text-align        : center;
+            position          : relative;
+            display           : flex;
+            align-items       : center;
+            justify-content   : center;
+            flex-direction    : column;
+            opacity           : 0;
+            transform         : translateY(75px);
+            -webkit-transform : translateY(75px);
+            transition        : all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition   : all 0.5s ease-in-out;
+            -ms-transition    : all 0.5s ease-in-out;
+            -o-transition     : all 0.5s ease-in-out;
+            -moz-transform    : translateY(75px);
+            -ms-transform     : translateY(75px);
+            -o-transform      : translateY(75px);
+
+            h1 {
+                pointer-events   : none;
+                font-size        : 30px;
+                font-weight      : 900;
+                color            : white;
+                margin-bottom    : 25px;
+                -webkit-transform: t;
+                -moz-transform   : t;
+                -ms-transform    : t;
+                -o-transform     : t;
+            }
+
+            h2 {
+                position      : absolute;
+                pointer-events: none;
+                top           : -60px;
+                right         : 0%;
+                color         : white;
+                opacity       : 0.1;
+                z-index       : -1;
+                font-size     : 100px;
+                font-weight   : 800;
+                color         : white;
+
+            }
+
+            p {
+                pointer-events: none;
+                font-size     : 17px;
+                color         : white;
+                margin-bottom : 20px;
+
+            }
+
+            a {
+                font-size            : 17px;
+                text-decoration      : none;
+                color                : gray;
+                background-color     : rgb(255, 255, 255);
+                cursor               : pointer;
+                border-radius        : 30px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius   : 30px;
+                -ms-border-radius    : 30px;
+                -o-border-radius     : 30px;
+                padding              : 10px 20px;
+                font-weight          : 600;
+            }
+        }
+
+        &:hover .contain {
+            transform        : translateY(20px);
+            -webkit-transform: translateY(20px);
+            -moz-transform   : translateY(20px);
+            -ms-transform    : translateY(20px);
+            -o-transform     : translateY(20px);
+            opacity          : 1;
+        }
+    }
+}
