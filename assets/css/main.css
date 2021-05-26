@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #03071b;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#f00, #f0f);
+  clip-path: circle(30% at right 70%);
+}
+
+body::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#60a2d8, #e91e63 50%);
+  clip-path: circle(20% at 10% 10%);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+section .card {
+  width: 280px;
+  height: 400px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+section .card .contain {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(75px);
+  -webkit-transform: translateY(75px);
+  -moz-transform: translateY(75px);
+  -ms-transform: translateY(75px);
+  -o-transform: translateY(75px);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+section .card .contain h1 {
+  pointer-events: none;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 10px;
+}
+
+section .card .contain h2 {
+  position: absolute;
+  pointer-events: none;
+  top: -75px;
+  right: 30px;
+  color: white;
+  opacity: 0.2;
+  z-index: -1;
+  font-size: 100px;
+  font-weight: 800;
+  color: white;
+}
+
+section .card .contain p {
+  pointer-events: none;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+section .card .contain a {
+  display: inline-block;
+  font-size: 17px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 600;
+}
+
+section .card:hover .contain {
+  transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  opacity: 1;
+}
+/*# sourceMappingURL=main.css.map */
